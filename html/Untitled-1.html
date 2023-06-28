@@ -1,0 +1,88 @@
+<label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <h2>Contacto administrativo</h2>
+
+        <label for="nombre-admin">Nombre:</label>
+        <input type="text" id="nombre-admin" name="nombre-admin" required><br><br>
+
+        <label for="ciudad-admin">Ciudad:</label>
+        <input type="text" id="ciudad-admin" name="ciudad-admin" required><br><br>
+
+        <label for="organizacion-admin">Organización:</label>
+        <input type="text" id="organizacion-admin" name="organizacion-admin" required><br><br>
+
+        <label for="telefono-admin">Teléfono:</label>
+        <input type="text" id="telefono-admin" name="telefono-admin" required><br><br>
+
+        <label for="correo-admin">Correo:</label>
+        <input type="text" id="correo-admin" name="correo-admin" required><br><br>
+
+        <h2>Contacto técnico</h2>
+
+        <label for="nombre-tecnico">Nombre:</label>
+        <input type="text" id="nombre-tecnico" name="nombre-tecnico" required><br><br>
+
+        <label for="ciudad-tecnico">Ciudad:</label>
+        <input type="text" id="ciudad-tecnico" name="ciudad-tecnico" required><br><br>
+
+        <label for="telefono-tecnico">Teléfono:</label>
+        <input type="text" id="telefono-tecnico" name="telefono-tecnico" required><br><br>
+
+        <label for="correo-tecnico">Correo:</label>
+        <input type="text" id="correo-tecnico" name="correo-tecnico" required><br><br>
+
+        <label for="direccion-ip">Dirección IP:</label>
+        <input type="text" id="direccion-ip" name="direccion-ip" required><br><br>
+
+        <label for="nserver">Nserver:</label>
+        <!--<input type="text" id="nserver" name="nserver" required><br><br> -->
+        <select id="nserver" name="nserver" required>
+          <option value="Apache HTTP">Apache HTTP</option>
+          <option value="Internet Information Services">Internet Information Services</option>
+          <option value="Sun Java System Web Server">Sun Java System Web Server</option>
+          <option value="Nginx">Nginx</option>
+          <option value="LiteSpeed">LiteSpeed</option>
+          <option value="Cherokee">Cherokee</option>
+        </select><br><br>
+
+        <!--<label for="tipo-registro">Tipo de registro:</label>
+        <input type="text" id="tipo-registro" name="tipo-registro" required>
+        <select id="tipo-registro" name="tipo-registro" required>
+          <option value="NS server.punto.net.ec">NS server.punto.net.ec</option>
+          <option value="MX pydaco-com.mail.eo.outlook.com">MX pydaco-com.mail.eo.outlook.com</option>
+          <option value="SOA gmcandidate.puntonet.intranet">SOA gmcandidate.puntonet.intranet</option>
+          <option value="TXT MS=21E2AAFBAA932E2406F3A93BEF81FAE7AABFEAB6">TXT MS=21E2AAFBAA932E2406F3A93BEF81FAE7AABFEAB6</option>
+          <option value="A 	190.12.9.30">A 	190.12.9.30</option>
+          <option value="PTR corp-190-12-9-30.uio.puntonet.ec">PTR corp-190-12-9-30.uio.puntonet.ec</option>
+          
+        </select>-->
+        <label for="tipo-registro">Tipo de registro:</label>
+        <label for="tipo-registro">Tipo de registro:</label>
+        <div id="tipo-registro">
+          <label><input type="checkbox" name="tipo-registro[]" value="NS server.punto.net.ec"> NS server.punto.net.ec</label><br>
+          <label><input type="checkbox" name="tipo-registro[]" value="MX pydaco-com.mail.eo.outlook.com"> MX pydaco-com.mail.eo.outlook.com</label><br>
+          <label><input type="checkbox" name="tipo-registro[]" value="SOA gmcandidate.puntonet.intranet"> SOA gmcandidate.puntonet.intranet</label><br>
+          <label><input type="checkbox" name="tipo-registro[]" value="TXT MS=21E2AAFBAA932E2406F3A93BEF81FAE7AABFEAB6"> TXT MS=21E2AAFBAA932E2406F3A93BEF81FAE7AABFEAB6</label><br>
+          <label><input type="checkbox" name="tipo-registro[]" value="A 190.12.9.30"> A 190.12.9.30</label><br>
+          <label><input type="checkbox" name="tipo-registro[]" value="PTR corp-190-12-9-30.uio.puntonet.ec"> PTR corp-190-12-9-30.uio.puntonet.ec</label><br>
+        </div><br>
+        
+        <br><br>
+        <label for="dominio">Dominio deseado:</label>
+        <div id="dominio">
+        <label><input type="checkbox" name="dominio[]" value=".ec-registro"> .ec-registro</label><br>
+        <label><input type="checkbox" name="dominio[]" value=".com-registro"> .com-registro</label><br>
+        <label><input type="checkbox" name="dominio[]" value=".org-registro"> .org-registro</label><br>
+        <label><input type="checkbox" name="dominio[]" value=".onio-registro"> .onion-registro</label><br>
+        </div><br>
+
+        <label>
+          <input type="checkbox" required>
+          Acepto los términos y condiciones
+        </label><br><br>
+  
+        <input type="submit" value="Enviar">

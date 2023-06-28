@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    form {
+      background-color: white;
+      border-radius: 8px;
+      padding: 60px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .submit-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .submit-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    .lista-desordenada {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .lista-desordenada li {
+      margin-bottom: 10px;
+    }
+    
+    .form-group label {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      grid-gap: 10px;
+      align-items: center;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <form id="domainForm" onsubmit="submitForm(event)">
+    <h3>FORMULARIO INGRESO DE DOMINIO</h3>
+
+    <br>
+
+    <h3>Datos de Dominio</h3>
+    <div class="form-group">
+      <label><i class="fas fa-globe"></i> Nombre del dominio</label>
+      <input type="text" id ="domainName" name="domainName" placeholder="Ingrese el nombre del dominio" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-laptop"></i> Dirección IP</label>
+      <input type="text" id="ipAddress" name="ipAddress" placeholder="Ingrese la dirección IP"  required>
+    </div>
+
+    <hr>
+
+    <h3>Datos del Administrador</h3>
+    <div class="form-group">
+      <label><i class="fas fa-user"></i> Nombre</label>
+      <input type="text"  id="adminName" name="adminName" placeholder="Ingrese el nombre del administrador" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-globe"></i> País</label>
+      <input type="text"  id="adminCountry" name="adminCountry" placeholder="Ingrese el país del administrador" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-phone"></i> Teléfono</label>
+      <input type="text" id="adminPhone" name="adminPhone" placeholder="Ingrese el teléfono del administrador" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-envelope"></i> Correo</label>
+      <input type="email" id="adminEmail"  name="adminEmail" placeholder="Ingrese el correo del administrador" required>
+    </div>
+
+    <hr>
+
+    <h3>Datos del Técnico</h3>
+    <div class="form-group">
+      <label><i class="fas fa-user"></i> Nombre</label>
+      <input type="text"  id="techName" name="techName" placeholder="Ingrese el nombre del técnico" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-globe"></i> País</label>
+      <input type="text"  id="techCountry"  name="techCountry" placeholder="Ingrese el país del técnico" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-phone"></i> Teléfono</label>
+      <input type="text" id="techPhone" name="techPhone" placeholder="Ingrese el teléfono del técnico"required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-envelope"></i> Correo</label>
+      <input type="email" id="techEmail" name="techEmail" placeholder="Ingrese el correo del técnico"required>
+    </div>
+
+    <hr>
+
+    <h3> Datos del Servicio - Servers</h3>
+    <div class="form-group">
+      <label><i class="fas fa-server"></i> Nombre del server 1</label>
+      <input type="text"  id="serverName1" name="serverName1" placeholder="Ingrese el nombre del server 1" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-server"></i> Nombre del server 2</label>
+      <input type="text"  id="serverName2" name="serverName2" placeholder="Ingrese el nombre del server 2" required>
+    </div>
+
+      <ul class="lista-desordenada">
+        <li>
+          <div class="form-group">
+            <label><i class="fas fa-list-alt"></i> Tipo de registro</label>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="tipoA">Tipo A:</label>
+            <input type="text" id="recordTypeA" name="tipoA" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="tipo3A">Tipo 3A:</label>
+            <input type="text" id="recordType3A" name="tipo3A" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="tipomx">Tipo Mx:</label>
+            <input type="text" id="recordTypeMx" name="tipomx" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="tipoptr">Tipo Ptr:</label>
+            <input type="text" id="recordTypePtr" name="tipoptr" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="cname">CNAME:</label>
+            <input type="text" id="recordTypeCname" name="cname" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+        <li>
+          <div class="grid-container">
+            <label for="spf">SPF:</label>
+            <input type="text" id="recordTypeSpf" name="spf" placeholder="Ingrese Descripción" required>
+          </div>
+        </li>
+      </ul>
+   
+
+    <div class="submit-buttons">
+      <button type="submit" class="submit-button">Registrar</button>
+      <button type="button" class="submit-button" onclick="clearForm()">Limpiar</button>
+    </div>
+
+    <script>
+        
+        const formulario = document.getElementById('domainForm');
+   
+        formulario.addEventListener('submit', async(e) => { e.preventDefault();
+            fetch('https://sheet.best/api/sheets/e9b6dc31-a7b1-466b-a49b-44a5c7429964', {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                "domainName": formulario.domainName.value,
+                "ipAddress": formulario.ipAddress.value,
+                "adminName": formulario.adminName.value,
+                "adminCountry": formulario.adminCountry.value,
+                "adminPhone": formulario.adminPhone.value,
+                "adminEmail": formulario.adminEmail.value,
+                "techName": formulario.techName.value,
+                "techCountry": formulario.techCountry.value,
+                "techPhone": formulario.techPhone.value,
+                "techEmail": formulario.techEmail.value,
+                "serverName1": formulario.serverName1.value,
+                "serverName2": formulario.serverName2.value,
+                "tipoA": formulario.tipoA.value,
+                "tipo3A": formulario.tipo3A.value,
+                "tipomx": formulario.tipomx.value,
+                "tipoptr": formulario.tipoptr.value,
+                "cname": formulario.cname.value,
+                "spf": formulario.spf.value
+              })
+          }).then(respuesta => {
+            if (respuesta.ok) {
+                alert('Información guardada correctamente');
+            } else {
+                alert('Error al guardar la información');
+            }
+        });
+        });
+
+      function clearForm() {
+        document.getElementById('domainForm').reset();
+      }
+    </script>
+  </form>
+  
+</body>
+</html>
+
